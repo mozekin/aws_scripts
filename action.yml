@@ -1,0 +1,5 @@
+- name: Build
+  author: GitHub
+    shell: pwsh
+    run: |
+      "Application Discovery Service\AWSDiscoveryAgentInstaller.ps1"
