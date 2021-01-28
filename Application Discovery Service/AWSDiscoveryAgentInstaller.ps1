@@ -1,3 +1,5 @@
+$ErrorActionPreference = 'stop'
+
 $TMP = $env:temp
 $ADSINSTALLER = "$TMP\AWSDiscoveryAgentInstaller.msi"
 $AGENTCONF = "C:\ProgramData\AWS\AWS Discovery\config"

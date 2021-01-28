@@ -28,4 +28,5 @@ jobs:
         run: Get-ChildItem
 
       - name: Run installer for Application Discovery Service agent
-        run: 'Application Discovery Service\AWSDiscoveryAgentInstaller.ps1'
+        run: | 
+        'Application Discovery Service\AWSDiscoveryAgentInstaller.ps1'
