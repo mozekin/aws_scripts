@@ -6,7 +6,7 @@ $AGENTCONF = "C:\ProgramData\AWS\AWS Discovery\config"
 $AGENTDL = "https://s3.ap-southeast-2.amazonaws.com/aws-discovery-agent.ap-southeast-2/windows/latest/AWSDiscoveryAgentInstaller.msi"
 
 
-Write-Host "Downloading Signal Sciences MSI installer to $ADSINSTALLER..."
+Write-Host "Downloading AWS Application Discovery Agent MSI installer to $ADSINSTALLER..."
 Invoke-WebRequest $AGENTDL -OutFile $ADSINSTALLER
 
 Write-Host "Installing $ADSINSTALLER..."
@@ -25,6 +25,6 @@ KEY_SECRET="REDACTED"
 
 "@
 
-Write-Host 'Restarting AWS Application Discovery Agent agent config re-initialisation...'
+Write-Host 'Restarting AWS Application Discovery Agent config re-initialisation...'
 Restart-Service "AWS Discovery Agent"
 Restart-Service "AWS Discovery Updater"
