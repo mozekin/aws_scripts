@@ -19,6 +19,6 @@ curl -o ${LOCALFILE} ${ADSAGENT}
 echo "installing the AWS Application Discovery Agent for linux..."
 
 tar -xzf ${LOCALFILE}
-cd aws-discovery-agent && sudo bash install -r ${REGION} -k ${KEY_ID} -s ${KEY_SECRET}
+cd aws-discovery-agent && bash install -r ${REGION} -k ${KEY_ID} -s ${KEY_SECRET}
 
 if [ $? -eq 0 ] ; then echo 'Package installed' ; else echo 'Error'; exit ; fi
