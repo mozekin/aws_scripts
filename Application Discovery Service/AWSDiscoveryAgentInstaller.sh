@@ -3,8 +3,8 @@
 #debug all lines & fail on error
 set -eu -o pipefail 
 
-sudo -n true
-test $? -eq 0 || exit 1
+# sudo -n true
+# test $? -eq 0 || exit 1
 
 # Set ADS variables
 REGION="ap-southeast-2"
