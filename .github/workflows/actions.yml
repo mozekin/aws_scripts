@@ -30,15 +30,8 @@ jobs:
       - name: Run installer for Application Discovery Service agent
         run: |
          & '.\Application Discovery Service\AWSDiscoveryAgentInstaller.ps1'
-
-  build:
-
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Listing files in current working directory
-        run: ls -lha
-
+  
       - name: Run installer for Application Discovery Service agent
         run: |
           './Application Discovery Service/AWSDiscoveryAgentInstaller.sh'
+        shell: bash
