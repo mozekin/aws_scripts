@@ -27,11 +27,11 @@ jobs:
       - name: Listing files in current working directory
         run: Get-ChildItem
 
-      - name: Run installer for Application Discovery Service agent
+      - name: Run powershell installer for Application Discovery Service agent
         run: |
          & '.\Application Discovery Service\AWSDiscoveryAgentInstaller.ps1'
   
-      - name: Run installer for Application Discovery Service agent
+      - name: Run shell installer for Application Discovery Service agent
         run: |
           './Application Discovery Service/AWSDiscoveryAgentInstaller.sh'
         shell: bash
