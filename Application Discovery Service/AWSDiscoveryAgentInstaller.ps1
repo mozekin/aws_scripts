@@ -19,10 +19,47 @@ if ($ADSINSTALLER.ExitCode -gt 0) {
 
 # Access keys for AWS Application Discovery Agent activation and configuration
 Set-Content -Path $AGENTCONF -Value @"
-REGION=ap-southeast-2
-KEY_ID="REDACTED"
-KEY_SECRET="REDACTED"
-
+{
+    "agentInventoryURL" : "https://s3.ap-southeast-2.amazonaws.com/aws-discovery-agent.ap-southeast-2/windows/latest/CURRENT_RELEASE_V4",
+    "autoUpdate" : true,
+    "awsKeyId" : "",
+    "awsKeySecret" : "",
+    "awsRegion" : "ap-southeast-2",
+    "dataCollectionDir" : "",
+    "enableAWSSDKLogging" : false,
+    "loggingLevel" : "",
+    "messageFile" : "",
+    "networkFilesRoot" : "",
+    "proxyHost" : "",
+    "proxyPassword" : "",
+    "proxyPort" : 0,
+    "proxyScheme" : "",
+    "proxyUser" : "",
+    "publishCloudWatchConfig" :
+    {
+        "additionalDimensions" : {},
+        "awsRegion" : null,
+        "byNic" : false,
+        "enabled" : false,
+        "metrics" :
+        [
+            "CPUUtilization",
+            "MemoryUtilization",
+            "DiskReadBytes",
+            "DiskWriteBytes",
+            "DiskReadOps",
+            "DiskWriteOps",
+            "NetworkIn",
+            "NetworkOut",
+            "NetworkPacketsIn",
+            "NetworkPacketsOut"
+        ]
+    },
+    "publisher" : "",
+    "serviceProtocol" : "arsenal",
+    "useAWSCABundle" : false,
+    "verifySSL" : true
+}
 "@
 
 Write-Host 'Restarting AWS Application Discovery Agent config re-initialisation...'
